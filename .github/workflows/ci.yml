@@ -25,3 +25,9 @@ jobs:
 
       - name: build procjet
         run: npm run build
+
+      - name: Print branch and commit info
+        run: |
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit: ${{ github.sha }}"
+          echo "User: ${{ github.actor }}"
