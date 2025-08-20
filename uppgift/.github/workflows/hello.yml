@@ -13,4 +13,4 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Print out line
-        run: echo "Hello from CI pipeline"
+        run: echo "Hello from CI pipeline" # test
