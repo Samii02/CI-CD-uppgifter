@@ -1,0 +1,17 @@
+name: Hello CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2 # Hämtar koden från repo
+
+      - name: Print out line
+        run: echo "Hello from CI pipeline" # Skriver ut detta medelande i loggen
