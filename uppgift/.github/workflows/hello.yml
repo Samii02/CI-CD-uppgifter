@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v2 # Hämtar koden från repo
 
       - name: Print out line
-        run: echo "Hello from CI pipeline" # Skriver ut detta medelande i log
+        run: echo "Hello from CI pipeline" # Skriver ut detta medelande i loggen
