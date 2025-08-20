@@ -6,10 +6,13 @@ on:
       - main
 
 jobs:
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+  info-job:
+    runs-on: ubuntu-latest
 
-    - name: Log commit hash
-      run: |
-        echo "Commit hash: ${{ github.sha }}"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Log commit hash
+        run: |
+          echo "Commit hash: ${{ github.sha }}"
