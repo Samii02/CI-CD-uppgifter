@@ -2,8 +2,7 @@ name: Hello CI
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
 
 jobs:
   build-and-test:
@@ -11,9 +10,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: setup node
         uses: actions/setup-node@v3 #Sätter upp e node enviroment med v20
         with:
-          node-version: "20" 
+          node-version: "20"
+
+      - name: Install dependecies
+        run: npm install # Installerar alla beroenden i package.json
 
       - name: Print out line
         run: echo "Hello from CI pipeline" # test
