@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        uses: actions/setup-node@v3 #Sätter upp e node enviroment med v20
+        with:
+          node-version: "20" 
 
       - name: Print out line
         run: echo "Hello from CI pipeline" # test
